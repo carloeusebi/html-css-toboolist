@@ -59,4 +59,57 @@ header{
     border: 1px solid grey;
 }
 
+/* tasks section */
 
+.tasks-section{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 20px 10px 20px;
+}
+
+.tasks-title{
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.tasks-title-arrow{
+    font-size: 0.8em;
+}
+
+.task-list{
+    font-size: 0.9em;
+    padding: 0;
+    list-style-position: inside;
+    list-style-type: none;    
+}
+
+.task-entry{
+    padding-top: 20px;
+    line-height: 20px;
+}
+
+.completed:after{
+    content: "\2713";
+}
+
+.completed{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    color: green;
+    border: 1px solid green;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.task-type{
+    display: inline-block;
+    border-radius: 20px;
+    padding: 2px 8px;
+    color: white;
+    font-size: 0.7em;
+}
+
+.editorial{
+    background-color: #45abea;
+}
