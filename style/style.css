@@ -68,14 +68,9 @@ header{
     border: 1px solid grey;
 }
 
-.button-add-section:active{
+.button-add-section:active, .button-add-task:active{
     padding: 4px 9px;
-    margin-left: 1px;
-}
-
-.button-add-task:active{
-    padding: 4px 9px;
-    margin: 0 1px
+    margin: 0 1px;
 }
 
 /* tasks section */
