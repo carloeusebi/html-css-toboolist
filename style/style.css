@@ -15,12 +15,16 @@ body{
     background-color: #fff;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* header */
 
 header{
     background-color: #fff;
     padding: 5px 20px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 #logo{
@@ -33,12 +37,14 @@ header{
     font-size: 2.5rem;
     font-weight: 800;
     vertical-align: middle;
+    color: black;
 }
+
 
 /* button bar */
 
 .button-bar{
-    padding: 10px 20px;
+    padding: 10px 30px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-bottom: 1px;   
@@ -62,18 +68,28 @@ header{
     border: 1px solid grey;
 }
 
+.button-add-section:active{
+    padding: 4px 9px;
+    margin-left: 1px;
+}
+
+.button-add-task:active{
+    padding: 4px 9px;
+    margin: 0 1px
+}
+
 /* tasks section */
 .tasks-section{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding: 10px 20px 10px 20px;
-    font-size: 20px;
+    padding: 10px 30px;
+    font-size: 23px;
 }
 
 /* task title */
 .tasks-title{
     font-size: 1em;
-    padding-top: 30px;
+    padding-top: 40px;
 }
 
 /* arrow has a pointer because we should click it
@@ -90,8 +106,8 @@ to collapse/extend list */
 }
 
 .task-entry{
-    padding-top: 20px;
-    line-height: 20px;
+    margin-top: 25px;
+    line-height: 15px;
     font-size: 0.9em;
 }
 
@@ -99,10 +115,12 @@ to collapse/extend list */
 
 .tasks-checkmark{
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     text-align: center;
+    font-size: 0.7em;
+    vertical-align: top;
 }
 
 /* i used class:after so that i only need to change the class
@@ -135,9 +153,9 @@ clickable to change them to completed tasks */
 .task-type{
     display: inline-block;
     border-radius: 20px;
-    padding: 0 8px;
+    padding: 3px 10px;
     color: white;
-    font-size: 0.7em;
+    font-size: 0.65em;
 }
 
 .editorial{
