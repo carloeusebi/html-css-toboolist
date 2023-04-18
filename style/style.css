@@ -41,12 +41,13 @@ header{
     padding: 10px 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    margin-bottom: 2px;   
+    margin-bottom: 1px;   
 }
 
 .button-bar button{
     padding: 5px 10px;
-    border-radius: 5px;   
+    border-radius: 5px;
+    cursor: pointer;   
 }
 
 .button-add-task{
@@ -62,32 +63,36 @@ header{
 }
 
 /* tasks section */
-
 .tasks-section{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 10px 20px 10px 20px;
+    font-size: 20px;
 }
 
+/* task title */
 .tasks-title{
-    font-size: 20px;
+    font-size: 1em;
     padding-top: 30px;
 }
 
+/* arrow has a pointer because we should click it
+to collapse/extend list */
 .tasks-title-arrow{
-    font-size: 0.8em;
+    cursor: pointer;
 }
 
+/* task entries */
 .task-list{
-    font-size: 0.9em;
+    font-size: 0.8em;
     padding: 0;
-    list-style-position: inside;
     list-style-type: none;    
 }
 
 .task-entry{
     padding-top: 20px;
     line-height: 20px;
+    font-size: 0.9em;
 }
 
 /* checkmarks "logic" */
@@ -97,8 +102,11 @@ header{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    text-align: center;     
+    text-align: center;
 }
+
+/* i used class:after so that i only need to change the class
+and it will automatically update the check/cross */
 
 .completed:after{
     content: "\2713";
@@ -113,9 +121,13 @@ header{
     content: "\2717";
 }
 
+/* not-completed task have a pointer to pretend they are 
+clickable to change them to completed tasks */
+
 .not-completed{
     color: red;
     border: 1px solid red;
+    cursor: pointer;   
 }
 
 
@@ -123,7 +135,7 @@ header{
 .task-type{
     display: inline-block;
     border-radius: 20px;
-    padding: 2px 8px;
+    padding: 0 8px;
     color: white;
     font-size: 0.7em;
 }
@@ -132,22 +144,60 @@ header{
     background-color: #45abea;
 }
 
+.editorial:after{
+    content: "Editorial";
+}
+
+/* using after so that to modify the task type you only
+need to change class, no need to change class AND text in html */
+
 .q1-goals{
     background-color: #9c72e4;
+}
+
+.q1-goals:after{
+    content: "Q1-Goals";
 }
 
 .recruiting{
     background-color: #64c0a9;
 }
 
+.recruiting:after{
+    content: "Recruiting";
+}
+
 .mobile{
     background-color: #f29e33;
+}
+
+.mobile:after{
+    content: "Mobile";
 }
 
 .website{
     background-color: #d863a1;
 }
 
+.website:after{
+    content: "Website"
+}
+
 .sales{
     background-color: #b0c926;
+}
+
+.sales:after{
+    content: "Sales";
+}
+
+/* since the last task-type is editorial but orange
+instead of blue this is needed to make it orange */
+
+/* .task-entry is needed to increase specificity 
+and override editorial blue blackground even if
+the selector is moved up on the file */
+
+.task-entry .orange-special{
+    background-color: #f29e33;
 }
