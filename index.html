@@ -16,12 +16,10 @@
     Carlo Eusebi -->
 
     <!-- header -->
-    <header>
-        <figure>
+    <header>    
             <!-- clicking on the logo or the text should lead to homepage -->
             <a href="#"><img id="logo" src="img/Logo.png" alt=""></a>
-            <a href="#"><h1 id="header-text">Toboolist</h1></a>
-        </figure>
+            <a href="#"><h1 id="header-text">Toboolist</h1></a>        
     </header>
 
         <!-- main -->
@@ -29,51 +27,49 @@
 
         <!-- button bar
         reminder! add funciotanility via javascript -->
-        <section class="container button-bar">            
-            <button class="button-add-task">Add Task</button>
-            <button class="button-add-section">Add Section</button>
-        </section>
+        <div class="container">
+            <Div class="button-bar">            
+                <button class="btn btn-blue">Add Task</button>
+                <button class="btn btn-white">Add Section</button>
+            </Div>
+            
+            
+            
+            <!-- tasks section -->
+            <Div class="tasks-section">
 
+                <!-- new task section -->
+                <Div class="new-task">
+                    <h2 class="tasks-title"><span class="tasks-title-arrow">&#9662;</span> New Task</h2>
+                    <ul class="task-list">
+                        <li class="task-entry"><span class="tasks-checkmark completed"></span> Quarterly Newsletter <span class="task-type editorial"></span></li>
+                    </ul>
+                </Div>
+                
+                <!-- today Div -->
+                <Div class="new-task">
+                    <h2 class="tasks-title"><span class="tasks-title-arrow">&#9662;</span> Today</h2>
+                    <ul class="task-list">
+                        <li class="task-entry"><span class="tasks-checkmark completed"></span> Recruiting blog post <span class="task-type editorial"></span></li>
+                        <li class="task-entry"><span class="tasks-checkmark completed"></span> Mobile app launch <span class="task-type q1-goals"></span></li>
+                        <li class="task-entry"><span class="tasks-checkmark not-completed"></span> Interview John H. <span class="task-type recruiting"></span></li>
+                        <li class="task-entry"><span class="tasks-checkmark completed"></span> Summit update to mobile storefronts <span class="task-type mobile"></span></li>
+                    </ul>
+                </Div>
 
-        
-        <!-- tasks section -->
-        <section class="container tasks-section">
-
-            <!-- new task section -->
-            <section class="new-task">
-                <h2 class="tasks-title"><span class="tasks-title-arrow">&#9662;</span> New Task</h2>
-                <ul class="task-list">
-                    <li class="task-entry"><span class="tasks-checkmark completed"></span> Quarterly Newsletter <span class="task-type editorial"></span></li>
-                </ul>
-            </section>
-
-            <!-- today section -->
-            <section class="new-task">
-                <h2 class="tasks-title"><span class="tasks-title-arrow">&#9662;</span> Today</h2>
-                <ul class="task-list">
-                    <li class="task-entry"><span class="tasks-checkmark completed"></span> Recruiting blog post <span class="task-type editorial"></span></li>
-                    <li class="task-entry"><span class="tasks-checkmark completed"></span> Mobile app launch <span class="task-type q1-goals"></span></li>
-                    <li class="task-entry"><span class="tasks-checkmark not-completed"></span> Interview John H. <span class="task-type recruiting"></span></li>
-                    <li class="task-entry"><span class="tasks-checkmark completed"></span> Summit update to mobile storefronts <span class="task-type mobile"></span></li>
-                </ul>
-            </section>
-
-            <!-- upcoming section -->
-            <section class="new-task">
-                <h2 class="tasks-title"><span class="tasks-title-arrow">&#9662;</span> Upcoming</h2>
-                <ul class="task-list">
-                    <li class="task-entry"><span class="tasks-checkmark not-completed"></span> Schedule Meeting with Alex <span class="task-type recruiting"></span></li>
-                    <li class="task-entry"><span class="tasks-checkmark completed"></span> Homepage refresh <span class="task-type website"></span></li>
-                    <li class="task-entry"><span class="tasks-checkmark not-completed"></span> Onboard new Sales team members <span class="task-type sales"></span></li> 
-                    <!-- in the screenshot next row has editorial tag but the orange colore like mobile, I decided to put in the same class as the previously encountered mobile-->
-                    <li class="task-entry"><span class="tasks-checkmark completed"></span> Review editoral characater <span class="task-type editorial orange-special"></span></li>
-                </ul>
-            </section>
-
-
-        </section>
-
-    </main>
-    
+                <!-- upcoming Div -->
+                <Div class="new-task">
+                    <h2 class="tasks-title"><span class="tasks-title-arrow">&#9662;</span> Upcoming</h2>
+                    <ul class="task-list">
+                        <li class="task-entry"><span class="tasks-checkmark not-completed"></span> Schedule Meeting with Alex <span class="task-type recruiting"></span></li>
+                        <li class="task-entry"><span class="tasks-checkmark completed"></span> Homepage refresh <span class="task-type website"></span></li>
+                        <li class="task-entry"><span class="tasks-checkmark not-completed"></span> Onboard new Sales team members <span class="task-type sales"></span></li> 
+                        <!-- in the screenshot next row has editorial tag but the orange colore like mobile, I decided to put in the same class as the previously encountered mobile-->
+                        <li class="task-entry"><span class="tasks-checkmark completed"></span> Review editoral characater <span class="task-type editorial orange-special"></span></li>
+                    </ul>
+                </Div>
+            </Div>
+        </div>
+    </main>    
 </body>
 </html>

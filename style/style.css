@@ -11,8 +11,9 @@ body{
 
 .container{
     max-width: 1080px;
-    margin: 0 auto;
+    margin: 10px auto;
     background-color: #fff;
+    border-radius: 10px;
 }
 
 a{
@@ -45,38 +46,35 @@ header{
 
 .button-bar{
     padding: 10px 30px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-bottom: 1px;   
+    margin-bottom: 1px; 
+    border-bottom: 1px solid #d3d3d3;  
 }
 
-.button-bar button{
+.btn{
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;   
 }
 
-.button-add-task{
+.btn.btn-blue{
     background-color: #1e90ff;
     color: white;
     border: 1px solid #1e90ff;
 }
 
-.button-add-section{
+.btn.btn-white{
     background-color: white;
     color: grey;
     border: 1px solid grey;
 }
 
-.button-add-section:active, .button-add-task:active{
+.btn:active{
     padding: 4px 9px;
     margin: 0 1px;
 }
 
 /* tasks section */
 .tasks-section{
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     padding: 10px 30px;
     font-size: 23px;
 }
@@ -114,14 +112,14 @@ to collapse/extend list */
     height: 15px;
     border-radius: 50%;
     text-align: center;
-    font-size: 0.7em;
+    font-size: 10px;
     vertical-align: top;
 }
 
 /* i used class:after so that i only need to change the class
 and it will automatically update the check/cross */
 
-.completed:after{
+.completed:before{
     content: "\2713";
 }
 
@@ -130,7 +128,7 @@ and it will automatically update the check/cross */
     border: 1px solid green;
 }
 
-.not-completed:after{
+.not-completed:before{
     content: "\2717";
 }
 
@@ -151,6 +149,7 @@ clickable to change them to completed tasks */
     padding: 3px 10px;
     color: white;
     font-size: 0.65em;
+    cursor: pointer;
 }
 
 .editorial{
