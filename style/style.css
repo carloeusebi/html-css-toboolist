@@ -10,7 +10,7 @@ body{
 }
 
 .container{
-    max-width: 1080px;
+    max-width: 900px;
     margin: 10px auto;
     background-color: #fff;
     border-radius: 10px;
@@ -100,50 +100,39 @@ to collapse/extend list */
 
 .task-entry{
     margin-top: 25px;
-    line-height: 15px;
     font-size: 0.9em;
+    vertical-align: middle;
 }
 
 /* checkmarks "logic" */
 
-.tasks-checkmark{
+.task-entry::before{
     display: inline-block;
     width: 15px;
     height: 15px;
     border-radius: 50%;
     text-align: center;
     font-size: 10px;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 /* i used class:after so that i only need to change the class
 and it will automatically update the check/cross */
 
-.completed:before{
+.task-entry.task-completed::before{
     content: "\2713";
-}
-
-.completed{
     color: green;
     border: 1px solid green;
 }
 
-.not-completed:before{
+.task-entry.task-not-completed::before{
     content: "\2717";
-}
-
-/* not-completed task have a pointer to pretend they are 
-clickable to change them to completed tasks */
-
-.not-completed{
     color: red;
     border: 1px solid red;
-    cursor: pointer;   
 }
 
-
 /* list of all task types */
-.task-type{
+.task-type::after{
     display: inline-block;
     border-radius: 20px;
     padding: 3px 10px;
@@ -152,64 +141,32 @@ clickable to change them to completed tasks */
     cursor: pointer;
 }
 
-.editorial{
+.task-type.editorial::after{
     background-color: #45abea;
-}
-
-.editorial:after{
     content: "Editorial";
 }
 
-/* using after so that to modify the task type you only
-need to change class, no need to change class AND text in html */
-
-.q1-goals{
+.task-type.q1-goals::after{
     background-color: #9c72e4;
-}
-
-.q1-goals:after{
     content: "Q1-Goals";
 }
 
-.recruiting{
+.task-type.recruiting::after{
     background-color: #64c0a9;
-}
-
-.recruiting:after{
     content: "Recruiting";
 }
 
-.mobile{
+.task-type.mobile::after{
     background-color: #f29e33;
-}
-
-.mobile:after{
     content: "Mobile";
 }
 
-.website{
+.task-type.website::after{
     background-color: #d863a1;
-}
-
-.website:after{
     content: "Website"
 }
 
-.sales{
+.task-type.sales::after{
     background-color: #b0c926;
-}
-
-.sales:after{
     content: "Sales";
-}
-
-/* since the last task-type is editorial but orange
-instead of blue this is needed to make it orange */
-
-/* .task-entry is needed to increase specificity 
-and override editorial blue blackground even if
-the selector is moved up on the file */
-
-.task-entry .orange-special{
-    background-color: #f29e33;
 }
